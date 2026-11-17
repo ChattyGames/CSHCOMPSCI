@@ -1,0 +1,199 @@
+{
+  "_howto": "Add one object to items for each game, project or class material. Only title, type and course are required. type is game, project or material. thumbnail is a path in this folder (showcase/...) or an https image URL. play opens inside the site (a showcase/ folder with an index.html, or an https embed URL from itch.io or Scratch). link opens in a new tab. Delete the sample entries (sample: true) when you add real ones. Use first names or team names only, never full names or photos of students.",
+  "items": [
+    {
+      "id": "chatty-arcade",
+      "title": "Chatty Arcade",
+      "type": "game",
+      "course": "Program tour",
+      "description": "Walk an arcade hall where every cabinet is a course. Play its mini-game, earn a cartridge and build your own course route. About a 40 MB first load, and it plays best on a computer with a keyboard. Sound starts after your first click.",
+      "thumbnail": "showcase/chatty-arcade/thumb.jpg",
+      "play": "showcase/chatty-arcade/index.html",
+      "link": "",
+      "credit": "Chatfield CS",
+      "date": "2026",
+      "tags": [
+        "Godot 4",
+        "HTML5",
+        "Plays best on a computer"
+      ],
+      "featured": true
+    },
+    {
+      "id": "escape-prison",
+      "title": "Escape Prison",
+      "type": "game",
+      "course": "Game Design",
+      "description": "A choose-your-own-adventure in HTML and CSS. You've been locked up for a crime you didn't commit, and every choice is a step toward breaking out and clearing your name.",
+      "thumbnail": "showcase/text-adventures/escape-prison.svg",
+      "play": "",
+      "link": "https://codeprojects.org/projects/weblab/t0t04X97pbpkeOAhHi4BCP9Yejm_a9uDEQd8rwYldyQ/",
+      "credit": "Game Design student",
+      "date": "",
+      "tags": [
+        "Text adventure",
+        "HTML/CSS",
+        "Code.org Web Lab"
+      ],
+      "featured": false
+    },
+    {
+      "id": "shining-eyes-fall",
+      "title": "Shining Eye's Fall",
+      "type": "game",
+      "course": "Game Design",
+      "description": "A courtroom mystery inspired by Ace Attorney. Gather evidence at the crime scenes, then pick what to show the jury. Some pieces change how the trial ends.",
+      "thumbnail": "showcase/text-adventures/shining-eyes-fall.svg",
+      "play": "",
+      "link": "https://codeprojects.org/projects/weblab/dOJKY2c8SjyJk_ei2c0nC57Oz_Gx68ytUFEvn_7oQBU/",
+      "credit": "Game Design student",
+      "date": "",
+      "tags": [
+        "Text adventure",
+        "Branching story",
+        "HTML/CSS"
+      ],
+      "featured": false
+    },
+    {
+      "id": "dead-resort",
+      "title": "Dead Resort",
+      "type": "game",
+      "course": "Game Design",
+      "description": "A spooky choose-your-path story set at a tropical resort that is not as relaxing as the brochure promised.",
+      "thumbnail": "showcase/text-adventures/dead-resort.svg",
+      "play": "",
+      "link": "https://codeprojects.org/projects/weblab/4BHPinBO_Rby2ppJGgQVyhQXiwOtd4awkSMWHw5rkIo/",
+      "credit": "Game Design student",
+      "date": "",
+      "tags": [
+        "Text adventure",
+        "HTML/CSS",
+        "Code.org Web Lab"
+      ],
+      "featured": false
+    },
+    {
+      "id": "new-minecraft-world",
+      "title": "A Brand New Minecraft World",
+      "type": "game",
+      "course": "Game Design",
+      "description": "A Minecraft fan adventure in HTML and CSS. You spawn into a fresh world and choose how your first day goes: hunt, punch trees, go caving or just wander.",
+      "thumbnail": "showcase/text-adventures/new-world.svg",
+      "play": "",
+      "link": "https://codeprojects.org/projects/weblab/N6kcHhD5lw9sAuXp57o8-ItrsC33pPhx2rbITBE3doo/",
+      "credit": "Game Design student",
+      "date": "",
+      "tags": [
+        "Text adventure",
+        "HTML/CSS",
+        "Code.org Web Lab"
+      ],
+      "featured": false
+    },
+    {
+      "id": "packet-dodge",
+      "title": "Packet Dodge",
+      "type": "game",
+      "course": "Coding 1",
+      "description": "Demo slot: a tiny browser game that shows how a student's HTML5 export plays right on this page. Replace it with a real game jam build.",
+      "thumbnail": "showcase/packet-dodge/thumb.svg",
+      "play": "showcase/packet-dodge/index.html",
+      "link": "",
+      "credit": "Template demo",
+      "date": "2027",
+      "tags": [
+        "HTML5",
+        "Canvas"
+      ],
+      "featured": true,
+      "sample": true
+    },
+    {
+      "id": "sample-construct",
+      "title": "Your Construct 3 game here",
+      "type": "game",
+      "course": "Coding 1",
+      "description": "Export from Construct 3 as Web (HTML5), drop the folder into showcase/, and point play at its index.html.",
+      "thumbnail": "showcase/samples/game.svg",
+      "play": "",
+      "link": "",
+      "credit": "Student team",
+      "date": "2027",
+      "tags": [
+        "Construct 3"
+      ],
+      "featured": true,
+      "sample": true
+    },
+    {
+      "id": "sample-godot",
+      "title": "Your Coding 2 engine build here",
+      "type": "game",
+      "course": "Coding 2",
+      "description": "Godot and Unity can export to the web, or link out to an itch.io page. Either way it lands here as one card.",
+      "thumbnail": "showcase/samples/engine.svg",
+      "play": "",
+      "link": "",
+      "credit": "Student team",
+      "date": "2027",
+      "tags": [
+        "Godot",
+        "itch.io"
+      ],
+      "sample": true
+    },
+    {
+      "id": "sample-field-guide",
+      "title": "CyberPatriot field guide",
+      "type": "material",
+      "course": "CyberPatriot",
+      "description": "The team's searchable reference for Windows, Windows Server and Linux images. Add the guide's link to make this card live.",
+      "thumbnail": "showcase/samples/guide.svg",
+      "play": "",
+      "link": "",
+      "credit": "Chatty Hackers",
+      "date": "2026–27",
+      "tags": [
+        "Reference",
+        "Linux",
+        "Windows"
+      ],
+      "featured": true,
+      "sample": true
+    },
+    {
+      "id": "sample-ai-field-guide",
+      "title": "AI student investigation",
+      "type": "project",
+      "course": "Future Technologies: AI",
+      "description": "Space for a finished student investigation, tested chatbot or field guide from the AI course.",
+      "thumbnail": "showcase/samples/ai.svg",
+      "play": "",
+      "link": "",
+      "credit": "Student team",
+      "date": "2027",
+      "tags": [
+        "AI literacy"
+      ],
+      "sample": true
+    },
+    {
+      "id": "sample-csf",
+      "title": "Live-coded music set",
+      "type": "project",
+      "course": "Computer Science Foundations",
+      "description": "Space for a CS Foundations project: a Strudel track, an Arduino build, or a first website.",
+      "thumbnail": "showcase/samples/music.svg",
+      "play": "",
+      "link": "",
+      "credit": "Student",
+      "date": "2027",
+      "tags": [
+        "Strudel",
+        "JavaScript"
+      ],
+      "sample": true
+    }
+  ]
+}

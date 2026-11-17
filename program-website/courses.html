@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Courses · Chatfield CS, Cyber &amp; AI</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The 2027–28 Computer Science, Cybersecurity and AI course lineup at Chatfield Senior High.">
+<meta name="theme-color" content="#07070b">
+<meta property="og:title" content="Courses · Chatfield CS, Cyber &amp; AI">
+<meta property="og:description" content="The 2027–28 Computer Science, Cybersecurity and AI course lineup at Chatfield Senior High.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Chatfield CS, Cyber and AI home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="3" y="3" width="58" height="58" rx="12" fill="none" stroke="#ff2d78" stroke-width="3"/><path d="M24 20 12 32l12 12" fill="none" stroke="#00e5cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 20l12 12-12 12" fill="none" stroke="#ffd60a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 16 29 48" stroke="#ff2d78" stroke-width="6" stroke-linecap="round"/></svg><span class="brand__text"><span class="brand__school">Chatfield Senior High / CTE</span><span class="brand__name">CS <b>·</b> Cyber <b>·</b> AI</span></span></a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html">Home</a><a href="courses.html" aria-current="page">Courses</a><a href="pathways.html">Pathways</a><a href="credentials.html">Credentials</a><a href="lab.html">The Lab</a><a href="ai.html">AI</a><a href="showcase.html">Showcase</a><a class="nav__cta" href="join.html">Get started</a></nav>
+  </div>
+</header>
+<section class="page-hero" data-parallax data-accent="teal">
+  <div class="layer hero__bg" data-depth="0.4" data-tilt="-6"><picture><source media="(max-width: 720px)" srcset="assets/img/hero-portrait.webp" type="image/webp"><source srcset="assets/img/hero.webp" type="image/webp"><img src="assets/img/hero.jpg" alt="" width="2000" height="667" fetchpriority="high"></picture></div>
+  <div class="layer hero__shade"></div>
+  <div class="layer hero__floor" data-depth="0.18"></div>
+  <div class="wrap page-hero__content" data-depth="-0.06" data-fade>
+    <span class="eyebrow">2027–28 course lineup</span>
+    <h1>Pick a <em>pathway</em>. Start anywhere.</h1>
+    <p class="lede">Level 1 courses are the entry courses. Tap any course for what you’ll do, ACC college credit and certification prep.</p>
+  </div>
+</section>
+<main id="main">
+<section class="section">
+  <div class="wrap">
+    <div class="filters" role="group" aria-label="Filter courses">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All courses</button>
+      <button class="chip" type="button" data-filter="entry" aria-pressed="false">Level 1 entry</button>
+      <button class="chip" type="button" data-filter="cs" data-c="teal" aria-pressed="false">Computer Science</button>
+      <button class="chip" type="button" data-filter="cyber" data-c="pink" aria-pressed="false">Cybersecurity</button>
+      <button class="chip" type="button" data-filter="ai" data-c="yellow" aria-pressed="false">Artificial Intelligence</button>
+      <button class="chip" type="button" data-filter="is" aria-pressed="false">Independent study</button>
+    </div>
+    <div class="course-grid" id="course-grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--ink-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Pathway map</span><h2>Where each course fits.</h2><p class="lede">Start with a Level 1 course, then go further in the pathway you like. Tap a course to see its details.</p></div>
+    <div class="map-wrap reveal"><div class="map" id="pathway-map"></div></div>
+    <div class="note-box reveal" style="margin-top:20px"><b>Helpful preparation</b>Computer Systems builds skills for both AP courses. It is not a prerequisite.</div>
+    <p class="reveal" style="margin-top:18px"><a href="pathways.html">Prefer a step-by-step route with prerequisites and credit? See the pathways →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Independent study / Grades 11–12</span><h2>Go deeper, on your terms.</h2></div>
+    <div class="cards">
+      <article class="card reveal"><span class="card__k">CTE Certification</span><h3>Your own certification project</h3><p>Build a cloud lab, prototype a VR experience, or go deeper in Python, Linux, and cybersecurity.</p><a href="courses.html#iscert">Details and certifications →</a></article>
+      <article class="card reveal"><span class="card__k">CTE Work-Based Learning</span><h3>A real IT placement</h3><p>Apply your skills in an approved IT placement. 60 internship hours can count for 0.5 high school elective credit.</p><a href="courses.html#wbl">Details →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="wrap"><h2>Ready to pick?</h2><div class="btn-row"><a class="btn btn--yellow" href="https://chatfield.jeffcopublicschools.org/counseling/course-registration" target="_blank" rel="noopener">Course registration ↗</a><a class="btn btn--ghost" href="credentials.html">Credit &amp; credential map</a></div></div></section>
+</main>
+<dialog class="sheet" id="course-sheet" aria-labelledby="sheet-title"><div class="sheet__head"></div><div class="sheet__body"></div></dialog>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="stack" style="gap:14px">
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="3" y="3" width="58" height="58" rx="12" fill="none" stroke="#ff2d78" stroke-width="3"/><path d="M24 20 12 32l12 12" fill="none" stroke="#00e5cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 20l12 12-12 12" fill="none" stroke="#ffd60a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 16 29 48" stroke="#ff2d78" stroke-width="6" stroke-linecap="round"/></svg><span class="brand__text"><span class="brand__school">Chatfield Senior High / CTE</span><span class="brand__name">CS <b>·</b> Cyber <b>·</b> AI</span></span></a>
+        <p class="measure">Computer Science, Cybersecurity, and AI at Chatfield Senior High School, Jeffco Public Schools.</p>
+        <p class="mono" style="font-size:.85rem">Break it. Build it. Hack it. Code it.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="courses.html">Courses</a></li><li><a href="pathways.html">Pathways</a></li><li><a href="index.html#arcade">Play Chatty Arcade</a></li><li><a href="credentials.html">Credit &amp; credential map</a></li><li><a href="lab.html">Chatty Hackville &amp; CyberPatriot</a></li><li><a href="ai.html">AI in our program</a></li><li><a href="showcase.html">Student showcase</a></li><li><a href="showcase.html#studio">Student AI projects</a></li><li><a href="join.html">Get started</a></li></ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul><li><a href="https://chatfield.jeffcopublicschools.org/counseling/course-registration" target="_blank" rel="noopener">Chatfield course registration ↗</a></li><li><a href="https://www.arapahoe.edu/sites/default/files/catalog/ay26-27-catalog.pdf" target="_blank" rel="noopener">ACC catalog ↗</a></li><li><a href="https://docs.google.com/spreadsheets/d/1aTDRModbEErqr5jJbi17GFwm5Q8rBh4iybr6HCEXIqY/edit?gid=0" target="_blank" rel="noopener">Colorado credential list ↗</a></li><li>Contact: <a href="mailto:jj.moss@jeffco.k12.co.us">jj.moss@jeffco.k12.co.us</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2027</span> Chatfield Senior High CTE · Jeffco Public Schools</span><span>2027–28 course lineup</span></div>
+  </div>
+</footer>
+<script src="data/courses.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/program.js" defer></script>
+</body>
+</html>
