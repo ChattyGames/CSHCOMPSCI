@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Packet Dodge</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #07070b; color: #f4f2f8; font-family: ui-monospace, Consolas, monospace; overflow: hidden; }
+  canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+  #hud { position: fixed; left: 12px; top: 10px; font-size: 14px; letter-spacing: .08em; pointer-events: none; }
+  #msg { position: fixed; inset: 0; display: grid; place-items: center; text-align: center; pointer-events: none; }
+  #msg div { background: rgba(7,7,11,.82); border: 1px solid #3a3a50; padding: 18px 24px; border-radius: 12px; }
+  b { color: #ffd60a; }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="Packet Dodge game"></canvas>
+<div id="hud">SCORE <b id="s">0</b> · BEST <b id="h">0</b></div>
+<div id="msg"><div>PACKET DODGE<br><br>Move with arrow keys, mouse or finger.<br>Catch <span style="color:#00e5cc">teal</span> packets. Dodge <span style="color:#ff2d78">pink</span> ones.<br><br><b>Click, tap or press Space to start</b></div></div>
+<script>
+(function(){
+  var c=document.getElementById('c'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2);
+  var p,items,score,best=0,run=false,keys={},t=0,msg=document.getElementById('msg');
+  try{best=+localStorage.getItem('pd-best')||0;}catch(e){}
+  document.getElementById('h').textContent=best;
+  function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);}
+  function reset(){p={x:W/2,y:H-60,r:12};items=[];score=0;t=0;}
+  function start(){if(run)return;reset();run=true;msg.style.display='none';loop();}
+  function end(){run=false;if(score>best){best=score;try{localStorage.setItem('pd-best',best);}catch(e){}}
+    document.getElementById('h').textContent=best;msg.style.display='grid';msg.firstElementChild.innerHTML='CONNECTION LOST<br><br>Score <b>'+score+'</b><br><br><b>Click, tap or press Space to retry</b>';}
+  function spawn(){var good=Math.random()<.35;items.push({x:20+Math.random()*(W-40),y:-20,v:2+Math.random()*2+t/1400,good:good,r:good?8:10});}
+  function loop(){if(!run)return;t++;
+    if(keys.ArrowLeft)p.x-=7;if(keys.ArrowRight)p.x+=7;p.x=Math.max(p.r,Math.min(W-p.r,p.x));
+    if(t%Math.max(10,34-Math.floor(t/400))===0)spawn();
+    x.fillStyle='rgba(7,7,11,.35)';x.fillRect(0,0,W,H);
+    x.strokeStyle='rgba(0,229,204,.08)';for(var gx=0;gx<W;gx+=40){x.beginPath();x.moveTo(gx,0);x.lineTo(gx,H);x.stroke();}
+    items.forEach(function(it){it.y+=it.v;x.fillStyle=it.good?'#00e5cc':'#ff2d78';x.shadowColor=x.fillStyle;x.shadowBlur=14;
+      x.beginPath();x.moveTo(it.x,it.y-it.r);x.lineTo(it.x+it.r,it.y);x.lineTo(it.x,it.y+it.r);x.lineTo(it.x-it.r,it.y);x.fill();x.shadowBlur=0;
+      var dx=it.x-p.x,dy=it.y-p.y;if(Math.sqrt(dx*dx+dy*dy)<it.r+p.r){if(it.good){score+=10;it.y=H+99;}else{end();}}});
+    items=items.filter(function(it){return it.y<H+40;});
+    if(t%30===0)score++;
+    document.getElementById('s').textContent=score;
+    x.fillStyle='#ffd60a';x.shadowColor='#ffd60a';x.shadowBlur=18;x.fillRect(p.x-p.r,p.y-p.r/2,p.r*2,p.r);x.shadowBlur=0;
+    requestAnimationFrame(loop);}
+  addEventListener('resize',size);
+  addEventListener('keydown',function(e){keys[e.key]=true;if(e.code==='Space'){e.preventDefault();start();}});
+  addEventListener('keyup',function(e){keys[e.key]=false;});
+  addEventListener('pointerdown',function(e){start();p&&(p.x=e.clientX);});
+  addEventListener('pointermove',function(e){if(run)p.x=e.clientX;});
+  size();x.fillStyle='#07070b';x.fillRect(0,0,W,H);
+})();
+</script>
+</body>
+</html>
